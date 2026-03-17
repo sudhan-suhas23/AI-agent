@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Business Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <div class="chat-container">
+
+      <div class="header">
+        <h2>AI Assistant</h2>
+        <span class="status">● Online</span>
+      </div>
+
+      <div id="chat-box"></div>
+
+      <!-- Suggestions -->
+      <div class="suggestions">
+        <button onclick="quickAsk('What services do you offer?')">Services</button>
+        <button onclick="quickAsk('Help me start a business')">Business Help</button>
+      </div>
+
+      <div class="input-area">
+        <button id="mic-btn" onclick="startListening()">🎤</button>
+
+        <input type="text" id="user-input" placeholder="Ask anything..." />
+
+        <button onclick="stopResponse()">⏹</button>
+        <button onclick="sendMessage()">➤</button>
+      </div>
+      <div id="recording-indicator">🎙️ Listening...</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
